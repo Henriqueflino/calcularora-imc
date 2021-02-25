@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="imc.js"></script>
+    <link rel="stylesheet" href="imc.css">
+    
+
+</head>
+
+<body>
+    <div class="text-imc">
+        <h1>O que é IMC ?</h1>
+        <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+        <p>índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+        <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+    </div>
+   
+    <div class="imc-box">
+        
+        <h1>Cálculo de IMC</h1>
+        <form id="imc-box calc-div">
+        <div class="peso-box">
+            <p style="margin-top: 3px; margin-bottom: 7px;"><label for="peso">Peso: (ex: 70)</label></p>
+            <input type="number" class="peso input" id="peso-id" name="Peso" placeholder="Quilos" >
+        </div>
+        <div class="altura-box">
+            <p style="margin-top: 4px;margin-bottom: 7px;"><label for="altura">Altura: (ex: 1.70)</label></p>
+            <input type="number" class="altura input" id="altura-id" name="Altura" placeholder="Metros" >
+        </div>
+        <div class="btnCalc ">
+            <input type="button" class="btn" onclick="calcularIMC()" value="Calcular">
+        </div>
+        <div class="btnLimp">
+            <input type="button" class="btnlaranja" onclick="calcularNovamente()" value="Limpar">
+        </div>
+            
+    </div>                
+        
+    <div class="imc-box2 result-div">
+        <h1>SEU IMC: </h1>
+        <h2 id="resultado" style="margin-top: 15px; margin-bottom: 15px; margin-right: 15px; margin-left: 15px;" >indefinido</h2>
+        <p><input type="button" class="btnNovamente" value="Calcular novamente" onclick="calcularNovamente()" style="margin-right: 55px;margin-left: 55px;margin-top: 62px;"></p>
+    </div>
+    
+</body>
+</html>

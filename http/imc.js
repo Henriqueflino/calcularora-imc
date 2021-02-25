@@ -39,7 +39,6 @@ function calcularNovamente() {
     //apagar os valores dos inputs
     $("#peso-id").val("");
     $("#altura-id").val("");
-
     //mostrar a div calc-div
     $('.calc-div').css("display", "block");
 
